@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<h2 id="title">RGB-h3D Scatter Plot</h2>
+<h2 id="title">RGB-i3D Scatter Plot</h2>
 <div id="visualization"></div>
 
 <script>
@@ -44,7 +44,8 @@
           x: r,
           y: g,
           z: b,
-          style: `rgb(${r},${g},${b})`
+          size: 1,  // 小さくしたければ 0.1 とかに
+          color: `rgb(${r},${g},${b})`
         };
       });
 
@@ -66,7 +67,7 @@
       xStep: 50,
       yStep: 50,
       zStep: 50,
-      dotSizeMinFraction: 0.5,
+      style: 'dot-size',
       showLegend: false
     };
 
