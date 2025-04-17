@@ -1,4 +1,4 @@
-
+  
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,6 +43,8 @@
           y: g,
           z: b,
           style: `rgb(${r},${g},${b})`
+          color: `rgb(${r},${g},${b})`,  // 明示的に color を渡す
+          size: 1                        // サイズ指定（任意に調整）
         };
       });
 
@@ -50,26 +52,24 @@
     const dataset = new vis.DataSet(data);
 
     const options = {
+    const options = {
       width: '100%',
       height: '100%',
-      style: 'dot-color',
+      style: 'dot',
       showPerspective: true,
       showGrid: true,
       showShadow: false,
       keepAspectRatio: true,
       verticalRatio: 1.0,
-      showLegend: false,
       xLabel: 'R',
       yLabel: 'G',
       zLabel: 'B',
       xStep: 50,
       yStep: 50,
       zStep: 50,
-      pointSize: 0.001,
-      dotSizeMinFraction: 0.001,
-      animation: true
-    };
-
+      pointSize: 0.1, // ここがサイズの目安
+      showLegend: false
+};
     new vis.Graph3d(container, dataset, options);
   }
 
