@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<h2 id="title">RGB-c3D Scatter Plot</h2>
+<h2 id="title">RGB-d3D Scatter Plot</h2>
 <div id="visualization"></div>
 
 <script>
@@ -42,7 +42,7 @@
           x: r,
           y: g,
           z: b,
-          style: `rgb(${r},${g},${b})`
+          style: `rgb(${r},${g},${b})`,
           color: `rgb(${r},${g},${b})`,  // 明示的に color を渡す
           size: 1                        // サイズ指定（任意に調整）
         };
@@ -51,7 +51,6 @@
     const container = document.getElementById('visualization');
     const dataset = new vis.DataSet(data);
 
-    const options = {
     const options = {
       width: '100%',
       height: '100%',
